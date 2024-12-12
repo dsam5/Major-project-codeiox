@@ -1,0 +1,7 @@
+Target,Vulnerability Type,Severity,Description,Steps to Reproduce,Impact,Evidence,Recommended Fix
+exampletarget.com,Cross-Site Scripting (XSS),Medium,Identified a Reflected Cross-Site Scripting (XSS) vulnerability on the login page of the website. The vulnerability allows an attacker to inject malicious scripts into the browser of users accessing the vulnerable page.,"1. Navigate to the login page (exampletarget.com/login).
+2. Enter the following payload in the 'username' field: <script>alert('XSS')</script>.
+3. Submit the form.
+4. Observe that the injected script is executed in the browser.","If exploited, this vulnerability could allow an attacker to execute arbitrary scripts in the user's browser, potentially leading to session hijacking, phishing attacks, or data theft.",Screenshot of the payload execution and browser alert pop-up demonstrating the vulnerability.,"1. Implement proper input validation and sanitization to remove harmful scripts.
+2. Use content security policies (CSP) to restrict script execution.
+3. Encode output properly before rendering on the webpage."
